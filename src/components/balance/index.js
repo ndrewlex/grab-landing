@@ -1,12 +1,20 @@
 import React from 'react';
 import { colors } from '../../themes';
 import { View, StyleSheet, Text } from 'react-native';
+import OvoIcon from '../../assets/svg/icon/Ovo.svg';
+import PointIcon from '../../assets/svg/icon/Points.svg';
 
 const BalanceInfo = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.balance}>IDR 39000</Text>
-      <Text style={styles.points}>34344 Points</Text>
+      <View style={styles.row}>
+        <OvoIcon width={30} height={30} />
+        <Text style={styles.balance}>IDR 39000</Text>
+      </View>
+      <View style={styles.row}>
+        <PointIcon width={30} height={30} />
+        <Text style={styles.points}>34344 Points</Text>
+      </View>
     </View>
   );
 };
@@ -16,26 +24,28 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row'
   },
+
+  row: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 15,
+    borderColor: colors.gray,
+    borderRightWidth: 1,
+    borderBottomWidth: 0.5
+    // paddingHorizontal: 15
+  },
+
   balance: {
     flex: 1,
-    padding: 15,
-    borderColor: colors.gray,
-    borderRightWidth: 0.5,
-    borderBottomWidth: 0.5
+    padding: 15
   },
 
   points: {
-    padding: 15,
     flex: 1,
-    borderColor: colors.gray,
-    borderBottomWidth: 0.5
-  },
-  textInput: {
-    height: 40,
-    borderRadius: 5,
-    borderColor: colors.gray,
-    backgroundColor: colors.white,
-    borderWidth: 1
+    padding: 15
   }
 });
 

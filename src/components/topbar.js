@@ -1,14 +1,15 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../themes';
-import icQrCode from '../assets/png/icon/QR.png';
+import QrLogo from '../assets/svg/icon/QR.svg';
 
 const TopBar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.textInput}>
         <View style={styles.qrCode}>
-          <Image style={styles.icQr} source={icQrCode} />
+          <QrLogo height={22} width={22} />
+          {/* <Image style={styles.icQr} source={icQrCode} /> */}
         </View>
         <View style={styles.hintWrapper}>
           <Text style={styles.hint}>Search offers, food, and places to go</Text>
@@ -21,12 +22,14 @@ const TopBar = () => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 15,
-    paddingVertical: 10,
+    paddingVertical: 20,
     flex: 1,
-    backgroundColor: colors.green
+    backgroundColor: colors.green,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   textInput: {
-    height: 30,
+    height: 35,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -53,12 +56,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#ccc'
-  },
-
-  icQr: {
-    width: 18,
-    height: 18
   }
+
+  // icQr: {
+  //   width: 24,
+  //   height: 24
+  // }
 });
 
 export default TopBar;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../themes';
 import { mainMenuListTop, mainMenuListBottom } from './helper';
 
@@ -9,7 +9,7 @@ const MainMenu = () => {
       <View style={styles.row}>
         {mainMenuListTop.map((menu, index) => (
           <View style={styles.item} key={index}>
-            <Image source={menu.link}></Image>
+            <menu.link width={42} height={42} />
             <Text>{menu.label}</Text>
           </View>
         ))}
@@ -17,7 +17,7 @@ const MainMenu = () => {
       <View style={styles.row}>
         {mainMenuListBottom.map((menu, index) => (
           <View style={styles.item} key={index}>
-            <Image source={menu.link}></Image>
+            <menu.link width={42} height={42} />
             <Text>{menu.label}</Text>
           </View>
         ))}
@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
   container: {
     padding: 0,
     margin: 0,
-    borderBottomWidth: 0.5,
     borderColor: colors.gray,
-    paddingBottom: 15
+    paddingBottom: 25,
+    borderWidth: 0.5
   },
   row: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingTop: 15
+    paddingTop: 20
   },
   item: {
     flex: 1,

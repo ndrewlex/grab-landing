@@ -90,9 +90,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'green'
   },
   section: {
+    padding: 15,
     borderWidth: 0.5,
-    borderBottomColor: colors.gray,
-    padding: 15
+    borderColor: colors.gray
   },
   subsection: {
     marginBottom: 20

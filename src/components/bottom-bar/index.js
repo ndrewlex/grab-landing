@@ -1,33 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import HomeIcon from '../../assets/svg/icon/menu-home.svg';
+import ActivityIcon from '../../assets/svg/icon/menu-activity.svg';
+import PaymentIcon from '../../assets/svg/icon/menu-payment.svg';
+import MessageIcon from '../../assets/svg/icon/menu-message.svg';
+import AccountIcon from '../../assets/svg/icon/menu-account.svg';
 import { colors } from '../../themes';
-import homeIcon from '../../assets/png/icon/menu-home.png';
-import activityIcon from '../../assets/png/icon/menu-activity.png';
-import paymentIcon from '../../assets/png/icon/menu-payment.png';
-import messageIcon from '../../assets/png/icon/menu-message.png';
-import accountIcon from '../../assets/png/icon/menu-account.png';
 
 const BottomBar = () => {
   return (
     <View style={styles.container}>
       <View style={styles.menu}>
-        <Image style={styles.imgMenu} source={homeIcon} />
+        <HomeIcon width={26} height={26} fill={colors.green} />
         <Text style={styles.textMenu}>Home</Text>
       </View>
       <View style={styles.menu}>
-        <Image style={styles.imgMenu} source={activityIcon} />
+        <ActivityIcon width={26} height={26} />
         <Text style={styles.textMenu}>Activity</Text>
       </View>
       <View style={styles.menu}>
-        <Image style={styles.imgMenu} source={paymentIcon} />
+        <PaymentIcon width={26} height={26} />
         <Text style={styles.textMenu}>Payment</Text>
       </View>
       <View style={styles.menu}>
-        <Image style={styles.imgMenu} source={messageIcon} />
+        <MessageIcon width={26} height={26} />
         <Text style={styles.textMenu}>Messages</Text>
       </View>
       <View style={styles.menu}>
-        <Image style={styles.imgMenu} source={accountIcon} />
+        <AccountIcon width={26} height={26} />
         <Text style={styles.textMenu}>Account</Text>
       </View>
     </View>

@@ -1,11 +1,11 @@
-import foodIconLink from '../../assets/png/icon/Food.png';
-import martIconLink from '../../assets/png/icon/Mart.png';
-import expressIconLink from '../../assets/png/icon/Express.png';
-import pulsaIconLink from '../../assets/png/icon/Pulsa-token.png';
-import carIconLink from '../../assets/png/icon/Car.png';
-import bikeIconLink from '../../assets/png/icon/Bike.png';
-import healthIconLink from "../../assets/png/icon/Health.png";
-import moreIconLink from '../../assets/png/icon/More.png';
+import foodIconLink from '../../assets/svg/icon/Food.svg';
+import martIconLink from '../../assets/svg/icon/Mart.svg';
+import expressIconLink from '../../assets/svg/icon/Express.svg';
+import pulsaIconLink from '../../assets/svg/icon/Pulsa-token.svg';
+import carIconLink from '../../assets/svg/icon/Car.svg';
+import bikeIconLink from '../../assets/svg/icon/Bike.svg';
+import healthIconLink from '../../assets/svg/icon/Health.svg';
+import moreIconLink from '../../assets/svg/icon/More.svg';
 
 export const mainMenuListTop = [
   {
@@ -37,10 +37,10 @@ export const mainMenuListBottom = [
   },
   {
     label: 'Health',
-    link: healthIconLink,
+    link: healthIconLink
   },
   {
     label: 'More',
     link: moreIconLink
   }
-]
+];
